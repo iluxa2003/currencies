@@ -1,0 +1,12 @@
+.ukr-bank-card__header {
+  display: flex;
+  justify-content: space-between;
+}
+.ukr-bank-card {
+  margin-bottom: 15px;
+}
+.ukr-bank-card__exchanger {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px;
+}

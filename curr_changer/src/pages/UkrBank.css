@@ -1,0 +1,17 @@
+.ukr-bank__main {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+}
+.ukr-bank__main-wrapper {
+  width: 1200px;
+}
+.ukr-bank__navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.175);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
