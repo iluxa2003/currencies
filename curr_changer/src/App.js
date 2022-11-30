@@ -1,14 +1,19 @@
 import "./App.css";
-import { useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+// import MainPage from "./pages/MainPage";
+import UkrBank from "./pages/UkrBank";
 function App() {
-  useEffect(() => {
-    fetch("https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json")
-      .then((response) => response.json())
-      .then((response) => console.log(response))
-      .catch((err) => console.error(err));
-  }, []);
-
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Router>
+        <Routes>
+          <Route path="" element={<UkrBank />} />
+          {/* <Route path="" element={<MainPage />} /> */}
+        </Routes>
+      </Router>
+    </div>
+  );
 }
 
 export default App;
