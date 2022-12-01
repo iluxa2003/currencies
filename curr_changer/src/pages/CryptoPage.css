@@ -1,0 +1,10 @@
+.crypto-page__main {
+  display: flex;
+  justify-content: center;
+}
+.crypto-page__main-wrapper {
+  width: 1200px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}

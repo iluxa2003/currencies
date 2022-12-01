@@ -29,7 +29,7 @@ const UkrBank = () => {
   };
   return (
     <>
-      <Header />
+      <Header active="ukrBank" />
       <main className="ukr-bank__main">
         <div className="ukr-bank__main-wrapper">
           <nav className="ukr-bank__navigation">

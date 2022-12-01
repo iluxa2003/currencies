@@ -1,0 +1,20 @@
+.crypto-card {
+  width: 18rem;
+  margin: 6px;
+}
+.crypto-card__arrow {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.crypto-card__text {
+  display: flex;
+  align-items: center;
+}
+.crypto-card__question {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 30px;
+}
