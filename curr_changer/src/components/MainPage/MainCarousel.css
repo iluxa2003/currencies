@@ -1,0 +1,19 @@
+.main-carousel {
+  margin: auto;
+  margin-top: 20px;
+  width: 700px;
+  height: 500px;
+  color: #000;
+}
+.main-carousel__item {
+  height: 500px !important;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.carousel-indicators [data-bs-target] {
+  background-color: #000;
+}
+.main-carousel__item-img {
+  width: 698px;
+  height: 350px;
+}
