@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./MainCarousel.css";
 import Carousel from "react-bootstrap/Carousel";
-import Button from "react-bootstrap/Button";
+
 import Card from "react-bootstrap/Card";
 import bank from "../images/ukr_bank.png";
 import crypto from "../images/crypto.jpg";
+import { Link } from "react-router-dom";
 const MainCarousel = () => {
   const [index, setIndex] = useState(0);
 
@@ -32,7 +33,10 @@ const MainCarousel = () => {
               other official country currencies in UAH, which updates every 12
               hours.
             </Card.Text>
-            <Button variant="primary">Go check the exchange info</Button>
+
+            <Link to="/UkrBank" className="btn btn-primary">
+              Go check the exchange info
+            </Link>
           </Card.Body>
         </Card>
       </Carousel.Item>
@@ -50,7 +54,10 @@ const MainCarousel = () => {
               The information about different crypto currencies, their cost in
               American USD and info about their personal vwap and changing.
             </Card.Text>
-            <Button variant="primary">Check cryptos</Button>
+
+            <Link to="/Crypto" className="btn btn-primary">
+              Check cryptos
+            </Link>
           </Card.Body>
         </Card>
       </Carousel.Item>

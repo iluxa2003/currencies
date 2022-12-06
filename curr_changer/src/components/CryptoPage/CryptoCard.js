@@ -2,14 +2,17 @@ import Card from "react-bootstrap/Card";
 import GreenArrow from "../images/green-arrow-up.svg";
 import RedArrow from "../images/red-arrow-down.svg";
 import Question from "../images/question-mark.svg";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./CryptoCard.css";
 const CryptoCard = (props) => {
+  const [id, setId] = useState("");
   const [cryptoNaming, setCryptoNaming] = useState("");
   const [cryptoSymbol, setCryptoSymbol] = useState("");
   const [priceUsd, setPriceUSD] = useState(0);
   const [changement, setChangement] = useState(0);
   useEffect(() => {
+    setId(props.info.id);
     setCryptoNaming(props.info.name);
     setCryptoSymbol(props.info.symbol);
     setPriceUSD(parseFloat(props.info.priceUsd));
@@ -32,13 +35,13 @@ const CryptoCard = (props) => {
           />
           {changement.toFixed(2) + " %"}
         </Card.Text>
-        <Card.Link href={"#"}>
+        <Link to={id}>
           <img
             src={Question}
             alt="Link to more"
             className="crypto-card__question"
           />
-        </Card.Link>
+        </Link>
       </Card.Body>
     </Card>
   );
