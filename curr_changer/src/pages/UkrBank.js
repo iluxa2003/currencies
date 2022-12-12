@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import "./UkrBank.css";
 import UkrBankCard from "../components/UkrBank/UkrBankCard";
+import ukrBankFetch from "../servises/uskrBankFetch";
 const UkrBank = () => {
   const [ukrBank, setUkrBank] = useState([]);
   const [filteredUkrBank, setFilteredUkrBank] = useState([]);
   const [optionValue, setOptionValue] = useState("All");
+
   useEffect(() => {
-    fetch("https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json")
-      .then((response) => response.json())
-      .then((response) => setUkrBank(response));
+    ukrBankFetch().then((response) => setUkrBank(response));
   }, []);
   useEffect(() => {
     setFilteredUkrBank(ukrBank);

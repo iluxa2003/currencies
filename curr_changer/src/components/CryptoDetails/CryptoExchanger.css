@@ -1,0 +1,11 @@
+.crypto-exchanger__label {
+  display: flex;
+  font-weight: bold;
+  margin-top: 20px;
+  gap: 32px;
+}
+.crypto-exchanger__input {
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid rgb(118, 118, 118);
+}

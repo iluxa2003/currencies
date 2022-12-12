@@ -2,12 +2,11 @@ import Header from "../components/Header";
 import "./CryptoPage.css";
 import { useEffect, useState } from "react";
 import CryptoCard from "../components/CryptoPage/CryptoCard";
+import cryptoFetch from "../servises/cryptoFetch";
 const CryptoPage = () => {
   const [cryptos, setCryptos] = useState([]);
   useEffect(() => {
-    fetch("https://api.coincap.io/v2/assets?limit=30")
-      .then((response) => response.json())
-      .then((response) => setCryptos(response.data));
+    cryptoFetch().then((response) => setCryptos(response.data));
   }, []);
   return (
     <>
